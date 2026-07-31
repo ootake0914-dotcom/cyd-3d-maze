@@ -1,0 +1,12 @@
+# Video raw assets (keep GIF demo)
+VID_*.mp4
+
+# Arduino / ESP32 build artifacts
+*.elf
+*.bin
+*.hex
+build/
+.pio/
+.vscode/
+.idea/
+*.tmp
