@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CYD-3D-MAZE // FLASH UTILITY</title>
+  <script type="module" src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module"></script>
+  <style>
+    :root {
+      --bg: #121212;
+      --panel-bg: #1a1a1a;
+      --text: #e0e0e0;
+      --text-muted: #888888;
+      --border: #333333;
+      --border-bold: #666666;
+      --accent: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Consolas", "Courier New", Courier, monospace;
+      background-color: var(--bg);
+      color: var(--text);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 16px;
+      line-height: 1.4;
+    }
+
+    /* Gritty Industrial Console Box */
+    .console-container {
+      background-color: var(--panel-bg);
+      border: 2px solid var(--border-bold);
+      width: 100%;
+      max-width: 640px;
+      padding: 24px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    }
+
+    /* System Header */
+    .console-header {
+      border-bottom: 2px solid var(--border-bold);
+      padding-bottom: 12px;
+      margin-bottom: 20px;
+    }
+
+    .sys-id {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+    }
+
+    h1 {
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: var(--accent);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    /* Media Frame */
+    .media-box {
+      border: 1px solid var(--border-bold);
+      background: #000000;
+      margin-bottom: 20px;
+      text-align: center;
+      padding: 2px;
+    }
+
+    .media-box img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: contain;
+      display: block;
+      image-rendering: pixelated;
+    }
+
+    /* Raw Log/Instruction Block */
+    .log-block {
+      border: 1px solid var(--border);
+      background-color: #0d0d0d;
+      padding: 14px;
+      margin-bottom: 20px;
+      font-size: 0.8rem;
+    }
+
+    .log-block .log-header {
+      color: var(--text-muted);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 6px;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    .log-block ol {
+      padding-left: 20px;
+    }
+
+    .log-block li {
+      margin-bottom: 6px;
+      color: #cccccc;
+    }
+
+    /* Flash Control Action Area */
+    .action-box {
+      border: 1px solid var(--border-bold);
+      padding: 16px;
+      text-align: center;
+      background-color: #141414;
+    }
+
+    esp-web-install-button {
+      --esp-tools-button-color: #ffffff;
+      --esp-tools-button-text-color: #000000;
+      --esp-tools-button-border-radius: 0px;
+      font-family: "Consolas", monospace;
+      font-size: 0.9rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    /* Footer Meta */
+    .console-footer {
+      margin-top: 20px;
+      padding-top: 10px;
+      border-top: 1px dashed var(--border);
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .console-footer a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid var(--accent);
+    }
+
+    .console-footer a:hover {
+      background-color: var(--accent);
+      color: var(--bg);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="console-container">
+    <div class="console-header">
+      <div class="sys-id">// HARDWARE_FLASH_UTILITY :: TARGET_DEVICE [ESP32-2432S028]</div>
+      <h1>CYD 3D MAZE DESK CLOCK</h1>
+    </div>
+
+    <div class="media-box">
+      <img src="demo.gif" alt="CYD 3D Maze Execution Preview">
+    </div>
+
+    <div class="log-block">
+      <div class="log-header">> DEPLOYMENT_REQUIREMENTS</div>
+      <ol>
+        <li>Connect CYD (ESP32-2432S028 double USB board) via USB.</li>
+        <li>Use Chrome, Edge, or Web Serial enabled browser.</li>
+        <li>Execute INSTALL below and select target COM port.</li>
+        <li>Flashing process writes image to 0x0 (approx 15 seconds).</li>
+      </ol>
+    </div>
+
+    <div class="action-box">
+      <esp-web-install-button manifest="manifest.json"></esp-web-install-button>
+    </div>
+
+    <div class="console-footer">
+      <span>STATUS: READY</span>
+      <a href="https://github.com/ootake0914-dotcom/cyd-3d-maze" target="_blank">[GITHUB_REPOSITORY]</a>
+    </div>
+  </div>
+
+</body>
+</html>

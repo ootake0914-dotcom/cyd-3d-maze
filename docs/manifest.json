@@ -1,0 +1,15 @@
+{
+  "name": "CYD 3D Maze Desk Clock",
+  "version": "1.0.0",
+  "builds": [
+    {
+      "chipFamily": "ESP32",
+      "parts": [
+        {
+          "path": "cyd-3d-maze-full-4mb.bin",
+          "offset": 0
+        }
+      ]
+    }
+  ]
+}

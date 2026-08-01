@@ -6,6 +6,16 @@ An interactive retro **3D Dungeon Crawler Desk Clock** running natively on the *
 
 ---
 
+## Web Installer (One-Click Browser Flash)
+
+Flash directly to your CYD board from your Web Browser without installing Arduino IDE or any software!
+
+- **Web Installer Page**: [https://ootake0914-dotcom.github.io/cyd-3d-maze/](https://ootake0914-dotcom.github.io/cyd-3d-maze/)
+
+*(Requires Chrome, Edge, or any browser with Web Serial API support)*
+
+---
+
 ## Overview
 
 The **CYD 3D Maze Desk Clock** transforms your ESP32 Cheap Yellow Display into a dynamic retro 3D desk clock. Featuring a real-time raycasting 3D engine, this desk clock autonomously navigates procedural dungeons, battles monsters, loots treasures, and displays a customizable digital clock with interactive touch controls.
